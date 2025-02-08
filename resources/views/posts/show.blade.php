@@ -61,7 +61,7 @@
                         <form action="{{ route('comments.destroy', $comment->id) }}" class="d-inline" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button onclick="return confirmDelete();" type="submit" class="btn btn-danger">Delete</button>
                         </form>
                 @endcan
             </div>

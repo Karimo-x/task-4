@@ -104,7 +104,6 @@ class PostController extends Controller
         $this->authorize('ownerPost', $post);
         
         $request->validate([
-            'image' => 'required', //cant send except you send a picture
             'title' => 'required|string',
             'content' => 'required|string',
         ]);

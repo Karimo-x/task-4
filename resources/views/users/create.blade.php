@@ -24,7 +24,6 @@
             <div class="mb-3">
                 <label for="is_admin" class="form-label">User Role :</label>
                 <select class="form-select" name="is_admin" id="is_admin" multiple aria-label="multiple select example">
-                    <option selected>What is the role :</option>
                     <option value="1">admin</option>
                     <option value="0" >user</option>
                 </select>

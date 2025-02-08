@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.signApp')
 @section('title', 'sign in')
 @section('content')
     <h4 class="mx-5 my-3"> Please Enter your information to sign up :</h4>

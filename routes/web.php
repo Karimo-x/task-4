@@ -17,6 +17,7 @@ Route::middleware('guest')->group(function (){
     Route::post('/', [AuthController::class , 'login']);
     Route::get('/signup' , [AuthController::class , 'showFormSignUp'])->name('signup');
     Route::post('/signup', [AuthController::class , 'store']);
+
 });
 
 Route::middleware('auth')->group(function (){

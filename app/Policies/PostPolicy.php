@@ -11,6 +11,6 @@ class PostPolicy
 {
     public function ownerPost(User $user , Post $post){
     
-        return $user->id == $post->user->id;
+        return $user->id == $post->user->id || $user->is_admin;
     }
 }

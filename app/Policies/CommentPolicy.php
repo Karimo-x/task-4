@@ -12,11 +12,11 @@ class CommentPolicy
 {
     public function ownerCommentDelete(User $user, Comment $comment)
     {
-        return $comment->user->id == auth()->id() || $comment->post->user_id == auth()->id();
+        return $comment->user->id == auth()->id() || $comment->post->user_id == auth()->id()  || $user->is_admin;
     }
 
     public function ownerCommentupdate(User $user, Comment $comment)
     {
-        return auth()->id() == $comment->user_id  ;
+        return auth()->id() == $comment->user_id  || $user->is_admin ;
     }
 }

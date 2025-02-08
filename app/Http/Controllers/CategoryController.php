@@ -84,7 +84,6 @@ class CategoryController extends Controller
         $this->authorize('managerUser', User::class);
         $request->validate([
             'title' => 'required|string',
-            'image' => 'required'
         ]);
         
         if ($request->hasFile('image')) {

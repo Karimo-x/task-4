@@ -24,7 +24,6 @@
         <div class="mb-3">
             <label for="category_id" class="form-label">Category Post :</label>
             <select class="form-select" name="category_id" id="category_id" multiple aria-label="multiple select example">
-                <option>Open this select menu</option>
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}" @if ($post->category_id == $category->id) selected @endif>
                         {{ $category->title }}</option>
@@ -34,7 +33,6 @@
         <div class="mb-3">
             <label for="tag_id" class="form-label">Tags Post :</label>
             <select class="form-select" name="tags[]" id="tag_id" multiple aria-label="multiple select example">
-                <option>Open this select menu</option>
                 @foreach ($tags as $tag)
                     <option value="{{ $tag->id }}"
                         @foreach ($post->tags as $tagId)

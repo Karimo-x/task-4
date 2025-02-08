@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'update user')
 @section('content') 
-    <h3>Edit user :</h3>
+    <h3 class="mx-5 my-3">Edit user : {{ $user->name }}</h3>
     <form action="{{ route('users.update' , $user->id) }}" method="POST" class="login" enctype="multipart/form-data">
         @csrf
         @method('PUT')
@@ -15,7 +15,7 @@
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">User password</label>
-            <input type="password" class="form-control" name="password" placeholder="Enter a user password" value="{{ $user->password }}" id="password">
+            <input type="password" class="form-control" name="password" placeholder="Enter a user password" id="password">
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">User image :</label>
@@ -27,7 +27,6 @@
             <div class="mb-3">
                 <label for="is_admin" class="form-label">User Role :</label>
                 <select class="form-select" name="is_admin" id="is_admin" multiple aria-label="multiple select example">
-                    <option>What is the role :</option>
                     <option value="1"
                     @if ($user->is_admin == '1')
 
